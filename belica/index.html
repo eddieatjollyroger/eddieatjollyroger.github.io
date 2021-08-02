@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+       <head>
+              <title>BelicaAssassina</title>
+              <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+              <meta id="gameViewport" name="viewport" content="width=device-width initial-scale=1">
+              <link href="styles.css" rel="stylesheet" type="text/css">
+
+       </head>
+
+       <body>
+       <p><a href="https://eddieatjollyroger.github.io">An experiment by Joao Pacheco</a></p>
+              <div align="center" id="embed-html"></div>
+              <script type="text/javascript" src="html/html.nocache.js"></script>
+       </body>
+
+       <script>
+       window.onkeypress =
+    function(event) {
+        // prevent the space key (page scroll down)
+        if(event.keyCode == 32){
+            event.preventDefault();
+            return false;
+        }
+    };
+
+window.onkeydown =
+    function(event) {
+        // prevent all navigation keys except the space key
+        if(event.keyCode >= 33 && event.keyCode <= 40){
+            event.preventDefault();
+            return false;
+        }
+    };
+
+              function handleMouseDown(evt) {
+                evt.preventDefault();
+                evt.stopPropagation();
+                window.focus();
+              }
+
+              function handleMouseUp(evt) {
+                evt.preventDefault();
+                evt.stopPropagation();
+              }
+              document.getElementById('embed-html').addEventListener('mousedown', handleMouseDown, false);
+              document.getElementById('embed-html').addEventListener('mouseup', handleMouseUp, false);
+       </script>
+</html>
